@@ -1,7 +1,8 @@
 package variadic
+
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestVariadic(t *testing.T) {
@@ -15,7 +16,7 @@ func TestVariadic2(t *testing.T) {
 
 // this function can take a variable number of arguments; a basically acts like variable of type []int
 func Min(a ...int) int {
-	min := int(^uint(0) >> 1)  // largest int
+	min := int(^uint(0) >> 1) // largest int
 	for _, i := range a {
 		if i < min {
 			min = i
@@ -28,7 +29,7 @@ func Min(a ...int) int {
 // any type. go doesn't have generics (or this is at least what i understood) so interface is like any type
 func Println(v ...interface{}) {
 	// note the v... syntax - this means that v is passed as a list of arguments and not as a single argument - a slice
-	fmt.Println(2, fmt.Sprintln(v...))  // Output takes parameters (int, string)
+	fmt.Println(2, fmt.Sprintln(v...)) // Output takes parameters (int, string)
 }
 
 type SomeStruct struct {

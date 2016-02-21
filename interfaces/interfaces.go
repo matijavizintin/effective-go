@@ -1,7 +1,8 @@
 package interfaces
+
 import (
-	"net/http"
 	"fmt"
+	"net/http"
 	"os"
 )
 
@@ -21,7 +22,6 @@ func Exit(ch Chan) {
 		fmt.Println(*val)
 	}
 }
-
 
 // args server
 // note that this is not the classic ServerHTTP function but is using the type HandlerFunc func(ResponseWriter, *Request)

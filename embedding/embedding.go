@@ -1,4 +1,5 @@
 package embedding
+
 import "bufio"
 
 // two interfaces
@@ -15,7 +16,6 @@ type ReadWriter interface {
 	Reader
 	Writer
 }
-
 
 // embedding struct that embeds two structs
 type ReadWriterX struct {
@@ -38,7 +38,6 @@ func (rw *ReadWriter1) Read(p []byte) (n int, err error) {
 }
 
 type dummyReader struct {
-
 }
 
 func (d dummyReader) Read(p []byte) (n int, err error) {
@@ -47,11 +46,9 @@ func (d dummyReader) Read(p []byte) (n int, err error) {
 }
 
 type dummyWriter struct {
-
 }
 
 func (d dummyWriter) Write(p []byte) (n int, err error) {
 	p[0] = 'a'
 	return 1, nil
 }
-

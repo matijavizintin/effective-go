@@ -1,4 +1,5 @@
 package recover
+
 import (
 	"testing"
 	"time"

@@ -1,7 +1,8 @@
 package init
+
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestInit(t *testing.T) {

@@ -1,7 +1,8 @@
 package pointers
+
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 type MyType int
@@ -10,7 +11,7 @@ func TestPointers(t *testing.T) {
 	var m = MyType(5)
 	fmt.Println(m)
 
-	s := m.String()        // this is actually rewritten to (&m).String()
+	s := m.String() // this is actually rewritten to (&m).String()
 	fmt.Println(s)
 }
 
