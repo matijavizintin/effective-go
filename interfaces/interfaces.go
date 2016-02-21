@@ -18,7 +18,7 @@ func (ch Chan) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 func Exit(ch Chan) {
 	for {
 		val := <-ch
-		fmt.Println(val)
+		fmt.Println(*val)
 	}
 }
 

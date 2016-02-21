@@ -24,7 +24,7 @@ func TestTypeExtraction(t *testing.T) {
 
 	value = StringHolder{"abc"}        // set value to var value
 
-	// extract string value from the value
+	// extract Stringer type from the value
 	str, ok := value.(Stringer)
 	if ok {
 		fmt.Println("Extracted value: ", str)

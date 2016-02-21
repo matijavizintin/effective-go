@@ -16,7 +16,7 @@ func TestServerAndChannel(t *testing.T) {
 	c := make(Chan, 10)
 	http.Handle("/chan", c)
 
-	// args handler
+	// args handler - ArgServer function is passed as a parameter
 	http.Handle("/args", http.HandlerFunc(ArgServer))
 
 	// run channel listener
