@@ -11,12 +11,12 @@ func TestEmbedding(t *testing.T) {
 
 	// init reader and writer
 	var reader *bufio.Reader
-	reader = bufio.NewReader(nil)
+	reader = bufio.NewReader(dummyReader{})
 
 	var writer *bufio.Writer
-	writer = bufio.NewWriter(nil)
+	writer = bufio.NewWriter(dummyWriter{})
 
-	// this is just a normal strict with 2 fields that can access only the Read method that is defined
+	// this is just a normal struct with 2 fields that can access only the Read method that is defined
 	var rw *ReadWriter1
 	rw = &ReadWriter1{reader, writer}
 	rw.Read(p)

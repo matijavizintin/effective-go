@@ -1,12 +1,12 @@
 package closure
+
 import "net/http"
 
 var sem = make(chan int, 10)
 
-func process(req * http.Request) {
+func process(req *http.Request) {
 	// dummy
 }
-
 
 func Serve(queue chan *http.Request) {
 	for req := range queue {

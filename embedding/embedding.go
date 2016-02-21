@@ -17,7 +17,7 @@ type ReadWriter interface {
 }
 
 
-// embedding struct that embeds two interfaces
+// embedding struct that embeds two structs
 type ReadWriterX struct {
 	*bufio.Reader
 	*bufio.Writer
@@ -35,5 +35,23 @@ type ReadWriter1 struct {
 // receiver is the reader field so in basically invoked on the Reader struct
 func (rw *ReadWriter1) Read(p []byte) (n int, err error) {
 	return rw.reader.Read(p)
+}
+
+type dummyReader struct {
+
+}
+
+func (d dummyReader) Read(p []byte) (n int, err error) {
+	p[0] = 'a'
+	return 1, nil
+}
+
+type dummyWriter struct {
+
+}
+
+func (d dummyWriter) Write(p []byte) (n int, err error) {
+	p[0] = 'a'
+	return 1, nil
 }
 

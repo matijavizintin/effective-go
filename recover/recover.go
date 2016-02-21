@@ -7,7 +7,7 @@ type Work struct {
 	// dummy
 }
 
-func Server(workChan <-chan *Work) {
+func Server(workChan <-chan *Work) {	// <-chan is a channel that only receives values
 	for work := range workChan {
 		go safelyDo(work)		// execute a goroutine with recover function
 	}
