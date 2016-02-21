@@ -1,4 +1,5 @@
 package defer1
+
 import (
 	"testing"
 	"fmt"
