@@ -6,7 +6,7 @@ This project is based on Google's Effective Go tutorial that teaches how to writ
 
 This project is test based so it allows to a new go learner to quickly execute code, see how it behaves, make small changes and observe what happens. See <a href="http://blog.gaku.net/match/">here</a> how to run specific tests.
 
-Follow the Effective Go tutorial. The packages are named accordingly.
+Follow the <a href="https://golang.org/doc/effective_go.html">Effective Go tutorial</a>. The packages are named accordingly.
 
 ## Environment
 
