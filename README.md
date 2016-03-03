@@ -17,7 +17,7 @@ Go to https://golang.org/doc/install and follow the instructions. Don't forget t
 **2. Clone the git repository**
 ```bash
 cd $GOPATH/src
-git clone https://github.com/matijavizintin/effective-go.git
+git clone git@github.com:matijavizintin/effective-go.git
 ```
 
 **3. Install dependencies**
